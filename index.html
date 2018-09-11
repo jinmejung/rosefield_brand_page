@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ROSEFIELD</title>
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800|Noto+Sans+KR:100,300,400,500,700,900|Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+   <div id="design_wrap">
+        <div class="main_visual">
+            <h1 class="main_txt fade_box fade_box_first" id="scene_00">
+                <img src="img/rosefield_main_txt.png" alt="로제필드">
+            </h1>
+        </div>
+
+
+        <div class="sub_wrap tribeca">
+            <div class="contents_box contents_box_left fade_box" id="scene_01">
+                <div class="img_box">
+                    <img src="img/rosefield_banner_01.jpg" alt="배너1">
+                </div>
+                <div class="wc_box">
+                    <img src="img/rosefield_wc_01.jpg" alt="시계배너1">
+                </div>
+                <div class="line"></div>
+                <div class="txt_box">
+                    <h2 class="line_name">Tribeca</h2>
+                    <p>섬세한 손목을 위한 작은 크기와 <br> 최소의 디자인을 갖춘 라인</p>
+                    <a class="more" href="#">MORE</a>
+                </div>
+            </div>
+            <div class="contents_box contents_box_right fade_box" id="scene_02">
+                <div class="img_box">
+                    <img src="img/rosefield_banner_02.jpg" alt="배너2">
+                </div>
+                <div class="wc_box">
+                    <img src="img/rosefield_wc_02.jpg" alt="시계배너2">
+                </div>
+                <div class="line"></div>
+                <div class="txt_box">
+                    <h2 class="line_name">The West Village</h2>
+                    <p>벨벳같이 부드러운 누벅 가죽의 밴드와 <br> 파스텔 톤의 색조가 어우러진 라인</p>
+                    <a class="more" href="#">MORE</a>
+                </div>
+            </div>
+            <div class="contents_box contents_box_left fade_box" id="scene_03">
+                <div class="img_box">
+                    <img src="img/rosefield_banner_03.jpg" alt="배너3">
+                </div>
+                <div class="wc_box">
+                    <img src="img/rosefield_wc_03.jpg" alt="시계배너3">
+                </div>
+                <div class="line"></div>
+                <div class="txt_box">
+                    <h2 class="line_name">The Upper East</h2>
+                    <p>미묘한 우아함과 멋지고 세련된 느낌의 라인</p>
+                    <a class="more" href="#">MORE</a>
+                </div>
+            </div>
+            <div class="contents_box contents_box_right fade_box" id="scene_04">
+                <div class="img_box">
+                    <img src="img/rosefield_banner_04.jpg" alt="배너4">
+                </div>
+                <div class="wc_box">
+                    <img src="img/rosefield_wc_04.jpg" alt="시계배너4">
+                </div>
+                <div class="line"></div>
+                <div class="txt_box">
+                    <h2 class="line_name">The September Issue</h2>
+                    <p>밴드가 부드러운 클레멘스 가죽으로 만들어져 <br> 자연스러운 모습을 한층 더 돋보이게 하는 라인</p>
+                    <a class="more" href="#">MORE</a>
+                </div>
+            </div>
+            <div class="contents_box contents_box_left fade_box" id="scene_05">
+                <div class="img_box">
+                    <img src="img/rosefield_banner_05.jpg" alt="배너5">
+                </div>
+                <div class="wc_box">
+                    <img src="img/rosefield_wc_05.jpg" alt="시계배너5">
+                </div>
+                <div class="line"></div>
+                <div class="txt_box">
+                    <h2 class="line_name">Bowery</h2>
+                    <p>뉴욕의 보헤미안과 <br>시크한 영감을 받아 탄생된 라인</p>
+                    <a class="more" href="#">MORE</a>
+                </div>
+            </div>
+            <div class="contents_box contents_box_right fade_box" id="scene_06">
+                <div class="img_box">
+                    <img src="img/rosefield_banner_06.jpg" alt="배너6">
+                </div>
+                <div class="wc_box">
+                    <img src="img/rosefield_wc_06.jpg" alt="시계배너6">
+                </div>
+                <div class="line"></div>
+                <div class="txt_box">
+                    <h2 class="line_name">Gramercy</h2>
+                    <p>깨끗한 디자인과 매끄러운 가죽으로 <br>현대적이고 심플함이 돋보이는 라인</p>
+                    <a class="more" href="#">MORE</a>
+                </div>
+            </div>
+        </div>
+    </div>  
+</body>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+ <script>
+        $(document).ready(function(){
+            $('.fade_box_first').addClass('view');
+
+            $(window).on('scroll', function() {
+               
+                $('.fade_box').each(function(index, el) {
+                    $(el).attr('id', 'scene_0'+index);
+                    var section_sticky = $('#scene_0'+index).offset().top - 600;       	
+                    if( $(window).scrollTop() > section_sticky) {
+                        $('#scene_0'+index).addClass('view');
+                    }
+                    else {
+                        $('#scene_0'+index).removeClass('view');	   	
+                    }		        		
+                });        
+                
+
+            });
+        });//ready func.
+ </script>
+</html>
